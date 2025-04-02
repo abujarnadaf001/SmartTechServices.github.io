@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="Contact.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">
+            <svg width="300" height="100" viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="#3B82F6"/>
+                        <stop offset="100%" stop-color="#10B981"/>
+                    </linearGradient>
+                    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+                        <feGaussianBlur stdDeviation="2" result="blur"/>
+                        <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+                    </filter>
+                </defs>
+                
+                <!-- Circuit Board Icon -->
+                <path d="M20,30 H30 V40 H20 Z
+                         M35,25 H45 V35 H35 Z
+                         M50,30 H60 V40 H50 Z
+                         M20,50 H30 V60 H20 Z
+                         M35,55 H45 V65 H35 Z
+                         M50,50 H60 V60 H50 Z" 
+                      fill="url(#logoGradient)"/>
+                
+                <!-- Company Name -->
+                <text x="75" y="50" font-family="Arial" font-size="24" font-weight="bold" 
+                      fill="url(#logoGradient)" filter="url(#glow)">
+                    SmartTechServices
+                </text>
+                
+                <!-- Tech Pulse Effect -->
+                <path d="M75,65 L85,65 L80,70 Z" fill="#3B82F6" opacity="0.8"/>
+                <path d="M90,65 L100,65 L95,70 Z" fill="#10B981" opacity="0.8"/>
+                <path d="M105,65 L115,65 L110,70 Z" fill="#3B82F6" opacity="0.8"/>
+            </svg>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about-us">About Us</a></li>
+                <li><a href="/solutions">Solutions</a></li>
+                <li><a href="/contact-us" class="active">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="contact-hero">
+        <div class="container">
+            <div class="contact-left">
+                <h1 class="heading">Invest in the future of your organisation &amp; workforce</h1>
+                <p>Smart Tech Services empowers individuals, teams, and organizations involved in mega projects & industrial setups to achieve remarkable outcomes. We are known for delivering exceptional solutions across various sectors, focusing on innovation, quality, and sustainability.</p>
+            </div>
+            <div class="contact-right">
+                <h3>Your company details:</h3>
+                <p>We'll need some information to get you started. Fill out the fields below.</p>
+                <form id="contact-form" method="post">
+                    <input type="text" name="first-name" placeholder="First Name" required>
+                    <input type="text" name="last-name" placeholder="Last Name" required>
+                    <input type="email" name="email" placeholder="Email ID" required>
+                    <input type="tel" name="phone" placeholder="Phone no." required>
+                    <label>
+                        <input type="checkbox" name="agree" required>
+                        I agree to SmartTech Services <a href="#">Terms & Conditions</a> and <a href="#">Privacy Policy</a>.
+                    </label>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Smart Tech Services</p>
+    </footer>
+</body>
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+
+
+header {
+    background-color: #0a2b36;
+    padding: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo img {
+    width: 120px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 40px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+nav ul li a.active {
+    font-weight: bold;
+}
+
+.contact-hero {
+    justify-content: space-between;
+    padding: 60px 20px;
+    background-color: white;
+}
+
+.contact-left,
+.contact-right {
+    padding: 40px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+
+.contact-left {
+    padding-right: 30px;
+}
+
+.contact-left h1 {
+    font-size: 40px;
+    color: #0a2b36;
+    font-weight: 600;
+}
+
+.contact-left p {
+    font-size: 20px;
+    color: #002846;
+}
+
+.contact-right {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-left: 20px;
+}
+
+.contact-right h3 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #0a2b36;
+}
+
+.contact-right p {
+    font-size: 16px;
+    color: #969696;
+}
+
+.contact-right form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-right input {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.contact-right input[type="checkbox"] {
+    width: auto;
+    margin-right: 10px;
+}
+
+.contact-right button {
+    padding: 15px;
+    background-color: #0044cc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+footer {
+    background-color: #0a2b36;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+a:hover{
+    font-size: 20px;
+    transition: 0.3s;
+
+}
+</style>
+</html>
